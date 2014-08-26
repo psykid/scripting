@@ -1,3 +1,7 @@
 to scrape data fom a excel file the phpexcel package is used
 download it from:
 http://www.codeplex.com/PHPExcel
+
+the aim of this quiz is to allow users to login and create a random quiz for them
+the questions will be selected from a text file randomly.
+every user will get a specified number of random question in a stipulated time
