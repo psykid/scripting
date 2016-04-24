@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+        <title>PHP/MySQL Contact Form with jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="PHP/MySQL Contact Form with jQuery">
+        <meta name="keywords" content="contact form, php, mysql, jquery">
+        <link rel="stylesheet" href="PHP_MySQL%20Contact%20Form%20with%20jQuery_files/style.css" type="text/css" media="screen">
+<script src="PHP_MySQL%20Contact%20Form%20with%20jQuery_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7243260-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+        <style>
+            a.back{
+                width:184px;
+                height:32px;
+                position:absolute;
+                bottom:10px;
+                left:10px;
+                background:transparent url(back.png) no-repeat top left;
+            }
+            a.switchstyle{
+                width:184px;
+                height:32px;
+                position:absolute;
+                top:10px;
+                left:10px;
+                background:transparent url(switchstyle.png) no-repeat top left;
+            }
+        </style>
+    <link href="PHP_MySQL%20Contact%20Form%20with%20jQuery_files/demoad.css" type="text/css" rel="stylesheet"><script src="PHP_MySQL%20Contact%20Form%20with%20jQuery_files/pro.js" async="" type="text/javascript"></script></head>
+    <body>
+        <div id="dic_bubble" class="selection_bubble fontSize13 noSelect" style="z-index: 9999; border: 1px solid rgb(74, 174, 222); visibility: hidden;"></div><div id="contact">
+            <h1>Contact us</h1>
+            <form id="ContactForm" action="">
+                <p>
+                    <label>Name</label>
+                    <input id="name" name="name" class="inplaceError" maxlength="120" autocomplete="off" type="text">
+					<span class="error" style="display:none;"></span>
+                </p>
+                <p>
+                    <label>Email</label>
+                    <input id="email" name="email" class="inplaceError" maxlength="120" autocomplete="off" type="text">
+					<span class="error" style="display:none;"></span>
+                </p>
+                <p>
+                    <label>Website<span>(optional)</span></label>
+                    <input id="website" name="website" class="inplaceError" maxlength="120" autocomplete="off" type="text">
+                </p>
+                <p>
+                    <label>Your message<br> <span>300 characters allowed</span></label>
+                    <textarea id="message" name="message" class="inplaceError" cols="6" rows="5" autocomplete="off"></textarea>
+					<span class="error" style="display:none;"></span>
+                </p>
+                <p class="submit">
+                    <input id="send" value="Submit" type="button">
+                    <span id="loader" class="loader" style="display:none;"></span>
+					<span id="success_message" class="success"></span>
+                </p>
+				<input id="newcontact" name="newcontact" value="1" type="hidden">
+            </form>
+        </div>
+        <div class="envelope">
+            <img id="envelope" src="PHP_MySQL%20Contact%20Form%20with%20jQuery_files/envelope.png" alt="envelope" style="display:none;" height="175" width="246">
+        </div>
+        <div><a class="back" href="http://tympanus.net/codrops/2010/03/12/php-mysql-contact-form-with-jquery/"></a></div>
+        <div><a class="switchstyle" href="http://tympanus.net/Tutorials/ContactForm/index2.php"></a></div>
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="PHP_MySQL%20Contact%20Form%20with%20jQuery_files/jquery.js"></script>
+		<script src="PHP_MySQL%20Contact%20Form%20with%20jQuery_files/jquery_002.js" type="text/javascript"></script>
+         <script src="PHP_MySQL%20Contact%20Form%20with%20jQuery_files/demoad.js"></script><div id="cdawrap"><div id="bsap_402" class="bsaPROrocks" data-serve="CKSDE"></div><span id="cda-remove"></span></div>
+    
+</body></html>

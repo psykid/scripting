@@ -1,0 +1,187 @@
+#cdawrap {
+	text-align: center; 
+	width: 180px; 
+	height: auto;
+	right: 15px; 
+	top: 35px;  
+	position: fixed; 
+	background: rgba(255,255,255,0.8);
+	border: 1px rgba(0,0,0,0.1);
+	z-index: 1000000;
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+body #cdawrap a {
+	text-decoration: none;
+}
+
+body #cdawrap .one .bsa_it_ad .bsa_it_p a:hover {
+    font-style: italic;
+}
+
+body #cdawrap .adpacks{
+	background: #fff;
+	padding: 15px;
+	margin: 15px 0 0;
+	border: 3px solid #eee;
+}
+
+body #cdawrap .carbonad {
+	background: transparent;
+	width: auto;
+	height: auto;
+	line-height: 1;
+	border: none;
+	padding: 10px 20px 40px;
+}
+
+body #cdawrap .carbonad-tag {
+	position: absolute;
+	margin: 0;
+	bottom: 10px;
+	left: 10px;
+	float: none;
+}
+
+body #cdawrap .carbonad-img {
+	float: none;
+	margin: 5px auto;
+	display: block;
+}
+
+body #cdawrap .carbonad-text {
+	margin: 0;
+	width: auto;
+	height: auto;
+	float: none;
+}
+
+body #cdawrap .one .bsa_it_ad{
+	background: transparent; 
+	border:none;
+	font-family: inherit; 
+	padding:10px 15px 10px 10px; 
+	margin:0;
+}
+body #cdawrap .one .bsa_it_ad .bsa_it_i{
+	display:block;
+	padding:0;
+	float:none;
+	margin:0 0 5px;
+}
+
+body #cdawrap .one .bsa_it_ad .bsa_it_i img{
+	padding:0;
+	border:none;
+}
+	
+body #cdawrap .one .bsa_it_ad .bsa_it_t{
+	padding: 6px 0;
+}
+
+body #cdawrap .one .bsa_it_ad .bsa_it_d {
+	color: #777;
+	font-size: 11px;
+}
+
+body #cdawrap .one .bsa_it_p{
+	display:none;
+}
+body #cdawrap #bsap_aplink,
+body #cdawrap #bsap_aplink:hover{
+	display: block;
+	font-size: 10px;
+	margin: 0px;
+	position: relative;
+	text-align: right;
+	color: #b62b27;
+	font-style: italic;
+	padding: 5px;
+}
+#cdawrap .one .bsa_it_ad{
+	padding: 10px;
+}
+#cdawrap .one .bsa_it_ad .bsa_it_i{
+	margin: 0px;
+	float: none;
+}
+#cda-remove{
+	opacity: 0.4;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	line-height: 1;
+	background: #999;
+	text-align: center;
+	cursor: pointer;
+}
+#cda-remove:hover {
+	background: #777;
+}
+#cda-remove:before {
+	content: 'x';
+	color: #fff;
+	font-weight: 400;
+	font-family: Arial, sans-serif;
+}
+
+#cdawrap .adhere.ad1.odd{
+	bottom: 10px;
+	position: absolute;
+	font-size: 11px;
+	right: 10px;
+}
+
+#cdawrap.custom-ad-no-text{
+	width: 160px; 
+	height: 135px;
+}
+#cdawrap.custom-ad-no-text a.custom-ad-link{
+	display: block;
+	margin: 15px 0 0 15px;
+	text-align: left;
+}
+#cdawrap .fusionentire{
+	display: block;
+	padding: 10px 0;
+}
+#cdawrap #fusion_ad a{
+	display: block;
+	padding: 10px;
+	font-size: 11px;
+	color: #333;
+	font-weight: bold;
+}
+#cdawrap #fusion_ad a:hover,
+#cdawrap #fusion_ad a:focus {
+	color: #000;
+}
+#cdawrap #fusion_ad .poweredbyfusion {
+	font-size: 10px;
+}
+@media screen and (max-width: 800px){ 
+	#cdawrap,
+	#cdawrap.custom-ad-no-text{
+		width: 100%; 
+		height: auto; 
+		right: 0px; 
+		top: auto !important; 
+		bottom: 0px !important;
+		left: 0px !important;
+		background: #fff;
+	} 
+	#cdawrap.custom-ad-no-text a.custom-ad-link{
+		margin: 15px auto 0 auto;
+		text-align: center;
+	}
+	#cdawrap .one .bsa_it_ad .bsa_it_i{
+		top: auto; 
+		bottom: 2px;
+	} 
+}
+
+@media screen and (max-width: 400px){ 
+	#cdawrap{display: none !important;}
+}

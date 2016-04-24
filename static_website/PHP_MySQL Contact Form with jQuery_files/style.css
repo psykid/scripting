@@ -1,0 +1,145 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color:#fff;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1.4em;
+    background:transparent url(../images/paperbg.jpg) repeat bottom center;
+}
+#contact{
+    background:transparent url(../images/formbg.png) no-repeat bottom center;
+    width:680px;
+    height:540px;
+    margin:20px auto 0px auto;
+}
+#contact h1{
+    color:#e73c00;
+    text-shadow:2px 1px 2px #f9f9f9;
+    margin-left:10px;
+}
+#contact form{
+    width:680px;
+    height:460px;
+    margin:0px auto;
+    padding:40px 0px 0px 0px;
+    clear:both;
+}
+#contact p{
+    width:100%;
+    float:left;
+    clear:both;
+    position:relative;
+    padding:5px 0px;
+}
+#contact label{
+    float:left;
+    width:210px;
+    text-align:right;
+    margin:10px 0px 5px 0px;
+    padding-right:10px;
+    text-shadow:1px 1px 1px #f0f0f0;
+    line-height:20px;
+}
+#contact input[type="text"],
+#contact textarea{
+    float:left;
+    margin:5px 0px 5px 0px;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: normal;
+    padding:4px 4px 6px 4px;
+    width:398px;
+    border:1px solid #ddd;
+    font-weight:bold;
+    color:#e73c00;;
+    text-shadow:-1px 1px 1px #aaa;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    -moz-box-shadow:1px 1px 3px #000;
+    -webkit-box-shadow:1px 1px 3px #000;
+    box-shadow:1px 1px 3px #000;
+}
+#contact textarea{
+    overflow-x:hidden;
+}
+#contact input[type="text"]:focus,
+#contact textarea:focus{
+    -moz-box-shadow:0px 0px 8px #e73c00;
+    -webkit-box-shadow:0px 0px 8px #e73c00;
+    box-shadow:0px 0px 8px #e73c00;
+}
+#contact input[type="button"]{
+    background:transparent url(../images/submit.png) no-repeat bottom center;
+    width:177px;
+    height:83px;
+    cursor:pointer;
+    color:#e73c00;
+    float:right;
+    border:none;
+    font-family: Georgia, serif;
+    font-weight:bold;
+    font-size:26px;
+    padding-left:15px;
+    cursor:pointer;
+    margin:5px -10px 0px 0px;
+    text-shadow:1px 1px 1px #000;   
+}
+#contact input[type="button"]:hover{
+    color:#fff;
+}
+#contact p.submit{
+    height:40px;
+}
+#contact label span{
+    font-size:11px;
+    line-height:20px;
+    float:right;
+    margin-left:3px;
+    font-weight:bold;
+    color:#f0f0f0;
+    text-shadow:1px 0px 1px #000;
+}
+.error{
+    background:transparent url(../images/errormsg.png) no-repeat top left;
+    width:203px;
+    height:50px;
+    position:absolute;
+    top:-15px;
+    right:-153px;
+    font-size:11px;
+    color:#fff;
+}
+.error span{
+    margin-left:25px;
+    line-height:40px;
+    text-shadow:1px 1px 1px #555;
+}
+.loader{
+    background:transparent url(../images/ajax-loader.gif) no-repeat top left;
+    width:31px;
+    height:31px;
+    float:right;
+    margin-top:35px;
+
+}
+.success{
+    height:31px;
+	float:right;
+	margin:35px 10px 0px 0px;
+}
+.envelope img{
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-top:-88px;
+    margin-left:-123px;
+}
