@@ -1,0 +1,41 @@
+<div id="thelement" style="float:right;" onload="begintimer()"></div>
+
+<script type="text/javascript">
+
+    var parselimit = 60;
+    function submitForm() {
+        document.forms[0].submit();
+        alert("Form submitted");
+    }
+
+    function begintimer() {
+        if (!document.images) {
+            return
+        }
+        if (parselimit == 1) {
+            submitForm();
+        }
+        else {
+            parselimit--;
+            curhr = Math.floor(parselimit / 3600);
+            curmin = Math.floor(parselimit / 60);
+            curmin = curmin - (curhr * 60);
+            cursec = parselimit % 60;
+            if (curhr != 0) {
+                curtime = curhr + " hr: " + curmin + " min: " + cursec + " sec";
+            }
+            else if (curmin != 0) {
+                curtime = curmin + " min: " + cursec + " sec";
+            }
+            else {
+                curtime = cursec + " seconds left";
+            }
+            window.status = curtime;
+
+            tim = setTimeout("begintimer()", 1000);
+            console.log("the time is "+ curtime);
+            Document.getElementById("thelement").innerHTML = "<b style='font-size:30%;color:#d9ff5e;'>" + curtime + "</b>";
+        }
+    }
+
+</script>
