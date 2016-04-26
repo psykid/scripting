@@ -23,13 +23,13 @@ if ($user != "") {
     $uid = $_SESSION['U_ID'];
     //echo $uid." hello";
 
-    $query = "SELECT * FROM student_score WHERE S_ID=" . $uid;
+    $query = "SELECT * FROM quiz_students WHERE studentId=" . $uid;
     $result = mysqli_query($con, $query) or die(mysqli_error($con) . " in student score");
 
     echo "<h4>Your complete previous history of quizzes:</h4><br>";
     while ($row = mysqli_fetch_assoc($result)) {
-
-        $q_id = $row['q_id'];
+        //TODO: change the queries according to the new database.
+        $q_id = $row['quizzId'];
         $s_ans = $row['options_selected'];
         $score = $row['score'];
 

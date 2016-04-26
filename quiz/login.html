@@ -1,32 +1,31 @@
 <!DOCTYPE HTML>
 <html>
-<head><title>Sign-In</title>
+<head>
+    <title>Sign-In</title>
     <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
-
-<body id="body-color">
+<body>
 <script src="bootstrap/js/bootstrap.js"></script>
-<div id="Sign-In">
-
-
-    <div style="text-align: center;">
-        <form class="form-search search-bar" method="POST" action="connectivity.php">
-            <br><br><br><br>
-            <legend>Login Here</legend>
-            <label> Username</label>
-            <input type="text" name="user" class="form-control" style="width:20%" /><br>
-            <label> Password</label>
-            <input type="password" name="pass" class="form-control" style="width:20%" /><br><br>
-            <div style="text-align: center;">
-                <button type="submit" class="btn btn-primary">Submit</button>
-                &nbsp&nbsp&nbsp
-                <button type="button" class="btn btn-info">Reset</button>
-            </div>
-        </form>
-    </div>
+<div style="text-align: center;">
+    <form class="form-search search-bar" method="POST" action="connectivity.php">
+        <!-- todo #2: use ajax call to see if the user exists-->
+        <br><br><br><br>
+        <legend>Login Here</legend>
+        <label> Username</label> <br>
+        <label>
+            <input type="text" name="user" class="form-control" style="width:100%"/>
+        </label><br>
+        <label> Password</label><br>
+        <label>
+            <input type="text" name="pass" class="form-control" style="width:100%"/>
+        </label><br><br>
+        <div style="text-align: center;">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            &nbsp&nbsp&nbsp
+            <button type="button" class="btn btn-info">Reset</button>
+        </div>
+    </form>
 </div>
 </body>
-
 </html>
-

@@ -37,7 +37,7 @@
 </body>
 <?php
 elseif ($user == ''):
-    header("Location: login.php");
+    header("Location: login.html");
 
 endif;
 ?>

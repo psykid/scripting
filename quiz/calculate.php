@@ -13,7 +13,7 @@
 <script src="bootstrap/js/bootstrap.js"></script>
 <br><br>
 &nbsp;&nbsp
-<center>
+<div style="text-align: center;">
     <input type="button" class="btn btn-primary" value="logout" onclick="logout();"><br><br><br>
 
 
@@ -75,6 +75,6 @@
         mysqli_query($con, $query) or die(mysql_error());
     }
     ?>
-</center>
+</div>
 </body>
 </html>

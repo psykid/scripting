@@ -1,15 +1,17 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Twitter</title>
+    <title>Sign-In</title>
     <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
 <script src="bootstrap/js/bootstrap.js"></script>
 <div style="text-align: center;">
-    <form class="form-search search-bar">
+    <form class="form-search search-bar" method="POST" action="connectivity.php">
+        <!-- todo #2: use ajax call to see if the user exists-->
         <br><br><br><br>
+        <legend>Login Here</legend>
         <label> Username</label> <br>
         <label>
             <input type="text" class="form-control" style="width:100%"/>
