@@ -16,4 +16,4 @@ The device shouldnt go to sleep/locked state while running the script.
 <br />
 I am working on a way to get notifications to mobile when the tickets are available. But probably the user may need to install an app for it.<br />
 <br />
-Note: This script was tested on chrome 55.0 using grease monkey 4.2.7.<br />
+Note: This script was tested on chrome  57.0.2987.133 (tamper monkey 4.2.7) and firefox 45.8.0 (grease monkey 3.1.0)<br />
