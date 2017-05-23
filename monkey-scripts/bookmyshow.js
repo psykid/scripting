@@ -10,9 +10,12 @@
 
 //date = simply the day,
 //interval = number of min b/w each check (in sec, default = 5min),
-//theatre = name of the theatre (should be exact)
-//date and interval are required fields, theatre is optional
-var date = 29, interval = 5*60, theatre="INOX: Maheshwari Parmeshwari Mall, Kachiguda";
+//theatres = names of the theatre (should be exact and the numbers can be anything.)
+//date and interval are required fields, theatres is optional and can be left empty so that sound will be played even if one theatre is present for that movie.
+var date = 24, interval = 5*60;
+var theatres = {};
+theatres['Luxes Cinemas: Chennai'] = 1;
+theatres['Rohinis Silver Screens: Chennai'] = 2;
 var audioLink = 'http://m63.telugu1.download/tere63xrc4wzse/Antasthulu%20-%20%281965%29/%5BiSongs.info%5D%20Ninu%20Veedani%20Needanu%20Nene.mp3';
 window.onload = readDocument;
 
@@ -25,7 +28,8 @@ window.onload = readDocument;
 function readDocument() {
     var x = document.getElementsByClassName("date-container");
     var today = new Date();
-    console.log(today);
+    console.log("checked on:" +
+                today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds());
     var curDate = today.getDate();
     if (curDate > date) {
         window.alert("Sorry to break this to you but we cant go back in time\n. Your ship has already sailed");
@@ -56,16 +60,13 @@ function playSound() {
     audio.play();
 }
 function searchForTheatre(item) {
-    console.log("looking for theatre " + item.VenueName);
-    if(item.VenueName.search(theatre) !=-1 || theatre==="") {
+    console.log("is this what we want? " + item.VenueName);
+    if (theatres.hasOwnProperty(item.VenueName) || Object.keys(theatres).length === 0) {
+        console.log("we found it! " + item.VenueName);
         playSound();
     } else {
         stateChange(-1);
     }
-}
-
-function splice(txt, idx, rem, str) {
-    return txt.slice(0, idx) + str + txt.slice(idx + Math.abs(rem));
 }
 
 function stateChange(newState) {
