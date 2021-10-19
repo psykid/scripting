@@ -5,11 +5,11 @@ The script's url is given such that it is available for any movie that is listed
 Else it will try to reload the page/play the music according to the inputs.<br />
 
 ### How to use it?
-in the very first lines, the date, theatre, interval and the audio link should be updated according to the use case.<br />
-	Date: a required field, indicates the date for which the movie tickets should be checked for.<br />
-	Theatre: an optional field (i.e. can be simple quotes) indicating the theatre to be checked for.<br />
-	Interval: a required field, indicates the time period (in sec) between consecutive page reloads.<br />
-	Audio link: also required field, indicates the audio file to be played when the tickets are available for the given date and theatre.<br />
+In the very first lines, the date, theatre, interval and the audio link should be updated according to the use case.
+1) Date: a required field, indicates the date for which the movie tickets should be checked for.
+2) Theatre: an optional field (i.e. can be simple quotes) indicating the theatre to be checked for.
+3) Interval: a required field, indicates the time period (in sec) between consecutive page reloads.
+4) Audio link: also required field, indicates the audio file to be played when the tickets are available for the given date and theatre.
 
 ### known issues:
 - The device shouldnt go to sleep/locked state while running the script.
