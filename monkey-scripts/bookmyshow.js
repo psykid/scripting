@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         book my show
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  play music when tickets are available
 // @author       preetam
 // @match        https://in.bookmyshow.com/buytickets/*
@@ -12,61 +12,67 @@
 //interval = number of min b/w each check (in sec, default = 5min),
 //theatres = names of the theatre (should be exact and the numbers can be anything.)
 //date and interval are required fields, theatres is optional and can be left empty so that sound will be played even if one theatre is present for that movie.
-var date = 24, interval = 5*60;
+var date = "19", interval = 5*60;
 var theatres = {};
-theatres['Luxes Cinemas: Chennai'] = 1;
-theatres['Rohinis Silver Screens: Chennai'] = 2;
-var audioLink = 'http://m63.telugu1.download/tere63xrc4wzse/Antasthulu%20-%20%281965%29/%5BiSongs.info%5D%20Ninu%20Veedani%20Needanu%20Nene.mp3';
-window.onload = readDocument;
+theatres['1, Newfangled Miniplex: Mondeal Retail Park'] = 1;
+var audioLink = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
+// window.onload = readDocument;
 
 (function() {
     'use strict';
-    // Your code here...
+    readDocument();
+  	
 })();
 
 
 function readDocument() {
-    var x = document.getElementsByClassName("date-container");
-    var today = new Date();
-    console.log("checked on:" +
-                today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds());
+  	var today = new Date();
+  	console.log("checked on:" + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds());
+    var x = document.getElementsByClassName("dates-wrapper");
     var curDate = today.getDate();
     if (curDate > date) {
         window.alert("Sorry to break this to you but we cant go back in time\n. Your ship has already sailed");
         return;
     }
-    var dateSearchString = "<div>"+date+"<br>";
-    if (x[0].innerHTML.search(dateSearchString)!=-1) {
-        console.log("found date " + date);
-        aVN_details.forEach(searchForTheatre);
-    } else {
-        var pos = -1;
-        if (curDate == date)
-            pos = x[0].innerHTML.search("TODAY");
-        else if (curDate == date-1)
-            pos = x[0].innerHTML.search("TOM");
-        if (pos != -1) {
-            console.log("we found either today or tomorrow, checking for theatre");
-            aVN_details.forEach(searchForTheatre);
-        } else {
-            console.log("Either bookings for your movie is't open yet or this movie is not gonna be there till then.");
-            stateChange(-1);
-        }
+  	
+	var datesAvailable = x[0].getElementsByClassName("date-numeric");
+	var found = false;
+	for (let i = 0; i < datesAvailable.length; i++) {
+		var currDate = datesAvailable[i].innerHTML.trim();
+		if (currDate === date) {
+			found = true;
+		}
+	}
+
+	if (found){
+    if (Object.keys(theatres).length === 0) {
+    	playSound();
+      	return;
     }
+		var availableTheatresList = document.getElementsByClassName("__venue-name");
+		searchForTheatre(availableTheatresList);
+	} else {
+		console.log("Either bookings for your movie is't open yet or this movie is not gonna be there till then.");
+        stateChange(-1);
+	}
 }
 
 function playSound() {
+  	console.log("playing the song");
     var audio = new Audio(audioLink);
     audio.play();
 }
-function searchForTheatre(item) {
-    console.log("is this what we want? " + item.VenueName);
-    if (theatres.hasOwnProperty(item.VenueName) || Object.keys(theatres).length === 0) {
-        console.log("we found it! " + item.VenueName);
-        playSound();
-    } else {
-        stateChange(-1);
+
+function searchForTheatre(availableTheatresList) {
+    console.log("what we have: " + availableTheatresList.length);
+    console.log("what we want: " + theatres);
+  	for (let i = 0; i < availableTheatresList.length; i++) {
+    		if (theatres.hasOwnProperty(availableTheatresList[i].text.trim())) {
+            console.log("we found it! " + availableTheatresList[i]);
+            playSound();
+        }
     }
+  	stateChange(-1);
 }
 
 function stateChange(newState) {
